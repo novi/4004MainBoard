@@ -1095,8 +1095,6 @@ F 3 "" H 6900 3500 50  0001 C CNN
 	1    6900 3500
 	1    0    0    -1  
 $EndComp
-Text Label 6900 4800 2    60   ~ 0
--10V
 Text Label 6900 4300 2    60   ~ 0
 CLK1
 Text Label 6900 6000 2    60   ~ 0
@@ -1359,9 +1357,9 @@ Wire Wire Line
 Wire Wire Line
 	2200 8600 2200 8400
 Wire Wire Line
-	2200 8400 3000 8400
+	3000 8400 2200 8400
 Wire Wire Line
-	3000 8400 3000 8100
+	3000 8100 3000 8400
 Connection ~ 2100 8600
 Connection ~ 3000 8300
 Wire Wire Line
@@ -1526,7 +1524,7 @@ Connection ~ 2900 1500
 Wire Wire Line
 	4900 2450 5000 2450
 Wire Wire Line
-	5000 2450 5000 2350
+	5000 2350 5000 2700
 Connection ~ 5000 2450
 Wire Wire Line
 	5300 2650 5300 2750
@@ -1539,7 +1537,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 1850 5500 1850
 Wire Wire Line
-	4600 2450 4600 1950
+	4600 1950 4600 2700
 Connection ~ 4600 1950
 Wire Wire Line
 	5650 2550 5450 2550
@@ -1644,9 +1642,9 @@ Wire Wire Line
 Wire Wire Line
 	7600 2450 7600 2900
 Wire Wire Line
-	7600 2900 9300 2900
+	9300 2900 7600 2900
 Wire Wire Line
-	9300 2900 9300 1800
+	9300 1800 9300 2900
 Wire Wire Line
 	9300 1800 9400 1800
 Connection ~ 5300 2050
@@ -1756,9 +1754,9 @@ Wire Wire Line
 Wire Wire Line
 	8500 4100 8500 6800
 Wire Wire Line
-	8500 6800 6600 6800
+	6600 6800 8500 6800
 Wire Wire Line
-	6600 6800 6600 6300
+	6600 6300 6600 6800
 Wire Wire Line
 	6600 6300 6900 6300
 Wire Wire Line
@@ -1787,19 +1785,19 @@ Wire Wire Line
 Wire Wire Line
 	8600 5600 8100 5600
 Wire Wire Line
-	8100 5500 8700 5500
+	8700 5500 8100 5500
 Wire Wire Line
 	8700 3500 8700 7250
 Wire Wire Line
 	8700 3800 8100 3800
 Wire Wire Line
-	8100 5400 8800 5400
+	8800 5400 8100 5400
 Wire Wire Line
 	8800 3500 8800 7150
 Wire Wire Line
 	8800 3700 8100 3700
 Wire Wire Line
-	8100 5300 8900 5300
+	8900 5300 8100 5300
 Wire Wire Line
 	8900 3500 8900 7050
 Wire Wire Line
@@ -1808,10 +1806,6 @@ Wire Wire Line
 	6300 5600 6300 5500
 Wire Wire Line
 	6600 5700 6900 5700
-Wire Wire Line
-	6900 4800 6500 4800
-Wire Wire Line
-	6500 4800 6500 4500
 Wire Wire Line
 	6500 3950 6500 4100
 Wire Wire Line
@@ -2547,4 +2541,31 @@ Connection ~ 8600 3900
 Connection ~ 8700 3800
 Connection ~ 8800 3700
 Connection ~ 8900 3600
+$Comp
+L C C25
+U 1 1 5AF7EC6C
+P 4750 2700
+F 0 "C25" H 4775 2800 50  0000 L CNN
+F 1 "100p" H 4775 2600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4788 2550 50  0001 C CNN
+F 3 "" H 4750 2700 50  0001 C CNN
+	1    4750 2700
+	0    1    1    0   
+$EndComp
+Connection ~ 4600 2450
+Wire Wire Line
+	5000 2700 4900 2700
+Text Label 6900 4800 2    60   ~ 0
+-10V
+$Comp
+L GND #PWR045
+U 1 1 5AF7FECE
+P 6500 4500
+F 0 "#PWR045" H 6500 4250 50  0001 C CNN
+F 1 "GND" H 6500 4350 50  0000 C CNN
+F 2 "" H 6500 4500 50  0001 C CNN
+F 3 "" H 6500 4500 50  0001 C CNN
+	1    6500 4500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
